@@ -19,7 +19,7 @@
  *
  * @package   mod_portugol
  * @category  backup
- * @copyright 2016 Your Name <your@email.address>
+ * @copyright 2016 IC: Guna Alexander, Vitor Marcelino e Leonardo Menezes
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
@@ -28,7 +28,7 @@
  *
  * @package   mod_portugol
  * @category  backup
- * @copyright 2016 Your Name <your@email.address>
+ * @copyright 2016 IC: Guna Alexander, Vitor Marcelino e Leonardo Menezes
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 class restore_portugol_activity_structure_step extends restore_activity_structure_step {

@@ -21,7 +21,7 @@
  * if you like, and it can span multiple lines.
  *
  * @package    mod_portugol
- * @copyright  2016 Your Name <your@email.address>
+ * @copyright  2016 IC: Guna Alexander, Vitor Marcelino e Leonardo Menezes
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
@@ -68,18 +68,33 @@ $PAGE->set_heading(format_string($course->fullname));
  * $PAGE->add_body_class('portugol-'.$somevar);
  */
 
+function salvarQuestao () {
+    /* O METODO DE SALVAR A QUESTÃO DEVERÁ PRIMEIRO VERIFICAR SE JA EXISTE A QUESTÃO SALVA NO BD, (ID ALUNO, ID QUESTÃO)
+        CASO A QUESTÃO NÃO TENHA SIDO SALVA AINDA USAMOS O METODO $DB->insert_records() PARA SALVAR A QUESTÃO NO BD,
+        CASO A QUESTÃO JÁ TENHA SIDO SALVA ANTES, USAREMOS O METODO $DB->update_record() PARA ATUALIZAR A QUESTÃO NO BD
+    */
+    echo "Salvando";
+}
+
 // Output starts here.
 echo $OUTPUT->header();
+
+//Printa o título do exercicio
+echo $OUTPUT->heading($portugol->name);
 
 // Conditions to show the intro can change to look for own settings or whatever.
 if ($portugol->intro) {
     echo $OUTPUT->box(format_module_intro('portugol', $portugol, $cm->id), 'generalbox mod_introbox', 'portugolintro');
 }
 
-// Replace the following lines with you own code.
-echo $OUTPUT->heading('Portugol Moodle');
-
 require 'ambiente.html';
+
+echo $OUTPUT->heading('Documentação Portugol');
+
+require 'doc.html';
 
 // Finish the page.
 echo $OUTPUT->footer();
+
+
+

@@ -25,7 +25,7 @@
  * Moodle is performing actions across all modules.
  *
  * @package    mod_portugol
- * @copyright  2016 Your Name <your@email.address>
+ * @copyright  2016 IC: Guna Alexander, Vitor Marcelino e Leonardo Menezes
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 

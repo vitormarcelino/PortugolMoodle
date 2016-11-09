@@ -21,7 +21,7 @@
  * visit: http://docs.moodle.org/en/Development:lib/formslib.php
  *
  * @package    mod_portugol
- * @copyright  2016 Your Name <your@email.address>
+ * @copyright  2016 IC: Guna Alexander, Vitor Marcelino e Leonardo Menezes
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
@@ -33,7 +33,7 @@ require_once($CFG->dirroot.'/course/moodleform_mod.php');
  * Module instance settings form
  *
  * @package    mod_portugol
- * @copyright  2016 Your Name <your@email.address>
+ * @copyright  2016 IC: Guna Alexander, Vitor Marcelino e Leonardo Menezes
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 class mod_portugol_mod_form extends moodleform_mod {
@@ -69,7 +69,7 @@ class mod_portugol_mod_form extends moodleform_mod {
 
         // Adding the rest of portugol settings, spreading all them into this fieldset
         // ... or adding more fieldsets ('header' elements) if needed for better logic.
-        $mform->addElement('static', 'label1', 'portugolsetting1', 'Your portugol fields go here. Replace me!');
+        $mform->addElement('static', 'label1', 'Configuração de tema', 'Your portugol fields go here. Replace me!');
 
         $mform->addElement('header', 'portugolfieldset', get_string('portugolfieldset', 'portugol'));
         $mform->addElement('static', 'label2', 'portugolsetting2', 'Your portugol fields go here. Replace me!');
