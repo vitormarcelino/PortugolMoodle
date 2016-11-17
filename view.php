@@ -91,10 +91,13 @@ require 'ambiente.html';
 
 echo $OUTPUT->heading('Documentação Portugol');
 
-require 'doc.html';
+//require 'doc.html';
+
+echo '<a href="salvar.php">Salvar</a>';
 
 // Finish the page.
 echo $OUTPUT->footer();
+
 
 
 

@@ -4,6 +4,7 @@
     xsi:noNamespaceSchemaLocation="../../../lib/xmldb/xmldb.xsd"
 >
   <TABLES>
+  	<!-- TABELA PORTUGOL -->
     <TABLE NAME="portugol" COMMENT="Default comment for portugol, please edit me">
       <FIELDS>
         <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="true" SEQUENCE="true"/>
@@ -20,6 +21,23 @@
       </KEYS>
       <INDEXES>
         <INDEX NAME="course" UNIQUE="false" FIELDS="course"/>
+      </INDEXES>
+    </TABLE>
+
+    <!--TABELA PORTUGOL_ATIVIDADE -->
+    <TABLE NAME="portugol_atividade" COMMENT="Nessa tabela sera armazenada as atividades feitas pelos alunos">
+      <FIELDS>
+        <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="true" SEQUENCE="true"/>
+		<FIELD NAME="idportugol" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="true" SEQUENCE="false"/>
+		<FIELD NAME="idaluno" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="true" SEQUENCE="false"/>
+        <FIELD NAME="nota" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="true" SEQUENCE="false" COMMENT="nota atribuida ao aluno"/>
+        <FIELD NAME="codigo" TYPE="text" NOTNULL="true" SEQUENCE="false" COMMENT="armaena o codigo escrito pelo aluno"/>
+      </FIELDS>
+      <KEYS>
+        <KEY NAME="primary" TYPE="primary" FIELDS="id"/>
+      </KEYS>
+      <INDEXES>
+        <INDEX NAME="idportugol" UNIQUE="false" FIELDS="idportugol"/>
       </INDEXES>
     </TABLE>
   </TABLES>
