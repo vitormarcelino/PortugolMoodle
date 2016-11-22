@@ -28,7 +28,7 @@
 require_once(dirname(dirname(dirname(__FILE__))).'/config.php');
 require_once(dirname(__FILE__).'/lib.php');
 
-if ($DB->record_exists('portugol_atividade', array('idportugol'=>1, 'idaluno'=>2))) {
+if ($DB->record_exists('portugol_atividade', array('idportugol'=>$_POST['idportugol'], 'idaluno'=>$_POST['idaluno']))) {
 	echo $DB->get_record('portugol_atividade', array('idportugol'=>1, 'idaluno'=>2))->codigo;
 } else {
 	echo "algoritmo novoAlgoritmo;
