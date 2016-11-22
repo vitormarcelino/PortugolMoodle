@@ -38,11 +38,8 @@ $registro = new stdClass();
 $registro->idportugol = 1;
 $registro->idaluno = 2;
 $registro->nota = 10;
-$registro->codigo = "Meu segundo codigo portugol";
+$registro->codigo = $_POST['codigo'];
 
 $lastinsertid = $DB->insert_record('portugol_atividade', $registro, false);
-?>
-<script>
-	window.history.back();
-</script>
-<?php
+
+echo "Salvo com sucesso!";

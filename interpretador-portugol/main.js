@@ -25803,12 +25803,12 @@ var Context = require('../context').context,
     std = new Context();
 
 std.setFunction('leia', function () {
-	//return prompt("Insira o valor da variavel:");
+	return prompt("Insira o valor da variavel:");
     //return global.terminal.read();
 	//global.terminal.insert("4");
 	//return global.terminal.get_command();
-    var c;
-    return JSON.stringify(global.terminal.push());
+    //var c;
+    //return JSON.stringify(global.terminal.push());
     
 });
 
@@ -25866,11 +25866,11 @@ var jspt = require('jspt');
 var CodeMirror = require('codemirror/lib/codemirror');
 
 var editor = CodeMirror.fromTextArea(document.getElementById("codigo"), {
-  lineNumbers: false,
-  readOnly: false,
-  lineNumbers: true,
-  theme: 'eclipse',
-  mode: "portugol"
+    lineNumbers: false,
+    readOnly: false,
+    lineNumbers: true,
+    theme: 'eclipse',
+    mode: "portugol"
 }); 
 
 jQuery('body').append(editor);
@@ -25879,7 +25879,18 @@ var btn = jQuery('#exec').on('click', function() {
 	//LIMPA O TERMINAL
 	global.terminal.clear();
 	var codigo = editor.getValue();
-  jspt.execute(codigo, createContext());
+    jspt.execute(codigo, createContext());
+});
+
+var btnSalvar = jQuery('#salvar').on('click', function() {
+    jQuery.ajax({
+        type: "POST",
+        url: 'salvar.php',
+        data: { codigo: editor.getValue()}, 
+        success:function(data) {
+            alert(data); 
+        }
+    });
 });
 
 //FUNÇÃO CRIAR CONTEXTO PARA A EXECUÇÃO

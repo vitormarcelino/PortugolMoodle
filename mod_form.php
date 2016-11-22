@@ -69,10 +69,11 @@ class mod_portugol_mod_form extends moodleform_mod {
 
         // Adding the rest of portugol settings, spreading all them into this fieldset
         // ... or adding more fieldsets ('header' elements) if needed for better logic.
-        $mform->addElement('static', 'label1', 'Configuração de tema', 'Your portugol fields go here. Replace me!');
+        // $mform->addElement('static', 'label1', 'Habilitar Documentação', 'Your portugol fields go here. Replace me!');
+        $mform->addElement('advcheckbox', 'habilitardocumentacao', 'Habilitar Documentação: ', null, array('group' => 1));
 
-        $mform->addElement('header', 'portugolfieldset', get_string('portugolfieldset', 'portugol'));
-        $mform->addElement('static', 'label2', 'portugolsetting2', 'Your portugol fields go here. Replace me!');
+        //$mform->addElement('header', 'portugolfieldset', get_string('portugolfieldset', 'portugol'));
+        //$mform->addElement('static', 'label2', 'portugolsetting2', 'Your portugol fields go here. Replace me!');
 
         // Add standard grading elements.
         $this->standard_grading_coursemodule_elements();

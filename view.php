@@ -68,14 +68,6 @@ $PAGE->set_heading(format_string($course->fullname));
  * $PAGE->add_body_class('portugol-'.$somevar);
  */
 
-function salvarQuestao () {
-    /* O METODO DE SALVAR A QUESTÃO DEVERÁ PRIMEIRO VERIFICAR SE JA EXISTE A QUESTÃO SALVA NO BD, (ID ALUNO, ID QUESTÃO)
-        CASO A QUESTÃO NÃO TENHA SIDO SALVA AINDA USAMOS O METODO $DB->insert_records() PARA SALVAR A QUESTÃO NO BD,
-        CASO A QUESTÃO JÁ TENHA SIDO SALVA ANTES, USAREMOS O METODO $DB->update_record() PARA ATUALIZAR A QUESTÃO NO BD
-    */
-    echo "Salvando";
-}
-
 // Output starts here.
 echo $OUTPUT->header();
 
@@ -93,11 +85,5 @@ echo $OUTPUT->heading('Documentação Portugol');
 
 //require 'doc.html';
 
-echo '<a href="salvar.php">Salvar</a>';
-
 // Finish the page.
 echo $OUTPUT->footer();
-
-
-
-

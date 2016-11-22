@@ -28,15 +28,15 @@
 
 defined('MOODLE_INTERNAL') || die();
 
-$string['modulename'] = 'portugol';
-$string['modulenameplural'] = 'portugols';
+$string['modulename'] = 'Atividade Portugol';
+$string['modulenameplural'] = 'Atividade Portugol';
 $string['modulename_help'] = 'Use the portugol module for... | The portugol module allows...';
-$string['portugol:addinstance'] = 'Add a new portugol';
-$string['portugol:submit'] = 'Submit portugol';
-$string['portugol:view'] = 'View portugol';
+$string['portugol:addinstance'] = 'Adicionar atividade Portugol';
+$string['portugol:submit'] = 'Enviar atividade Portugol';
+$string['portugol:view'] = 'Ver atividade portugol';
 $string['portugolfieldset'] = 'Custom example fieldset';
 $string['portugolname'] = 'portugol name';
 $string['portugolname_help'] = 'This is the content of the help tooltip associated with the portugolname field. Markdown syntax is supported.';
-$string['portugol'] = 'portugol';
+$string['portugol'] = 'Atividade Portugol';
 $string['pluginadministration'] = 'portugol administration';
-$string['pluginname'] = 'portugol';
+$string['pluginname'] = 'Atividade portugol';
