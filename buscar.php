@@ -28,24 +28,14 @@
 require_once(dirname(dirname(dirname(__FILE__))).'/config.php');
 require_once(dirname(__FILE__).'/lib.php');
 
-/* O METODO DE SALVAR A QUESTÃO DEVERÁ PRIMEIRO VERIFICAR SE JA EXISTE A QUESTÃO SALVA NO BD, (ID ALUNO, ID QUESTÃO)
-CASO A QUESTÃO NÃO TENHA SIDO SALVA AINDA USAMOS O METODO $DB->insert_records() PARA SALVAR A QUESTÃO NO BD,
-CASO A QUESTÃO JÁ TENHA SIDO SALVA ANTES, USAREMOS O METODO $DB->update_record() PARA ATUALIZAR A QUESTÃO NO BD
-*/
-
-$registro = new stdClass();
-$registro->idportugol = $_POST['idportugol'];
-$registro->idaluno = $_POST['idaluno'];
-$registro->nota = 10;
-$registro->codigo = $_POST['codigo'];
-
-if($DB->record_exists('portugol_atividade', array('idportugol'=>$registro->idportugol, 'idaluno'=>$registro->idaluno))) {
-	//Já existe a atividade para o aluno, executamos o update
-	$registro->id = $DB->get_record('portugol_atividade', array('idportugol'=>$registro->idportugol, 'idaluno'=>$registro->idaluno))->id;
-	$DB->update_record('portugol_atividade', $registro);
-	echo "Atualizado com sucesso!";
+if ($DB->record_exists('portugol_atividade', array('idportugol'=>1, 'idaluno'=>2))) {
+	echo $DB->get_record('portugol_atividade', array('idportugol'=>1, 'idaluno'=>2))->codigo;
 } else {
-	//Não existe a atividade para o aluno, executamo o insert
-	$DB->insert_record('portugol_atividade', $registro, false);
-	echo "Salvo com sucesso!";
+	echo "algoritmo novoAlgoritmo;
+variaveis
+	//declaração
+fimvariaveis
+inicio
+	//codigo aqui
+fim";
 }

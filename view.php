@@ -25,8 +25,6 @@
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-// Replace portugol with the name of your module and remove this line.
-
 require_once(dirname(dirname(dirname(__FILE__))).'/config.php');
 require_once(dirname(__FILE__).'/lib.php');
 
@@ -79,7 +77,7 @@ if ($portugol->intro) {
     echo $OUTPUT->box(format_module_intro('portugol', $portugol, $cm->id), 'generalbox mod_introbox', 'portugolintro');
 }
 
-require 'ambiente.html';
+include 'ambiente.php';
 
 echo $OUTPUT->heading('Documentação Portugol');
 
