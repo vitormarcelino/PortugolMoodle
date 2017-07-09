@@ -79,7 +79,7 @@ if ($portugol->intro) {
 
 include 'ambiente.php';
 
-echo $OUTPUT->heading('Documentação Portugol');
+// echo $OUTPUT->heading('Documentação Portugol');
 
 //require 'doc.html';
 
