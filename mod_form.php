@@ -46,34 +46,26 @@ class mod_portugol_mod_form extends moodleform_mod {
 
         $mform = $this->_form;
 
-        // Adding the "general" fieldset, where all the common settings are showed.
         $mform->addElement('header', 'general', get_string('general', 'form'));
 
-        // Adding the standard "name" field.
         $mform->addElement('text', 'name', get_string('portugolname', 'portugol'), array('size' => '64'));
         if (!empty($CFG->formatstringstriptags)) {
             $mform->setType('name', PARAM_TEXT);
         } else {
             $mform->setType('name', PARAM_CLEANHTML);
         }
+
         $mform->addRule('name', null, 'required', null, 'client');
         $mform->addRule('name', get_string('maximumchars', '', 255), 'maxlength', 255, 'client');
         $mform->addHelpButton('name', 'portugolname', 'portugol');
 
-        // Adding the standard "intro" and "introformat" fields.
         if ($CFG->branch >= 29) {
             $this->standard_intro_elements();
         } else {
             $this->add_intro_editor();
         }
 
-        // Adding the rest of portugol settings, spreading all them into this fieldset
-        // ... or adding more fieldsets ('header' elements) if needed for better logic.
-        // $mform->addElement('static', 'label1', 'Habilitar Documentação', 'Your portugol fields go here. Replace me!');
-        $mform->addElement('advcheckbox', 'habilitardocumentacao', 'Habilitar Documentação: ', null, array('group' => 1));
-
-        //$mform->addElement('header', 'portugolfieldset', get_string('portugolfieldset', 'portugol'));
-        //$mform->addElement('static', 'label2', 'portugolsetting2', 'Your portugol fields go here. Replace me!');
+        $mform->addElement('advcheckbox', 'activdoc', get_string('activdoc', 'portugol'));
 
         // Add standard grading elements.
         $this->standard_grading_coursemodule_elements();

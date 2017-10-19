@@ -79,9 +79,9 @@ if ($portugol->intro) {
 
 include 'ambiente.php';
 
-// echo $OUTPUT->heading('Documentação Portugol');
+if($portugol->activdoc) {
+    echo $OUTPUT->heading('Documentação Portugol');
+    require 'doc.html';
+}
 
-//require 'doc.html';
-
-// Finish the page.
 echo $OUTPUT->footer();
