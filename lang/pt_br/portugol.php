@@ -30,7 +30,7 @@ defined('MOODLE_INTERNAL') || die();
 
 $string['modulename'] = 'Atividade Portugol';
 $string['modulenameplural'] = 'Atividade Portugol';
-$string['modulename_help'] = 'Módulo de atividades para desenvolvimento de algoritmos na linguagem Portugol';
+$string['modulename_help'] = 'Módulo de atividades para desenvolvimento de algoritmos na linguagem Portugol.<br>Desenvolvido por Vitor Marcelino, Leonardo Menezes e Guna Alexander';
 $string['portugol:addinstance'] = 'Adicionar atividade Portugol';
 $string['portugol:submit'] = 'Enviar atividade Portugol';
 $string['portugol:view'] = 'Ver atividade portugol';
