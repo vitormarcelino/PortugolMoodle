@@ -80,7 +80,6 @@ if ($portugol->intro) {
 include 'ambiente.php';
 
 if($portugol->activdoc) {
-    echo $OUTPUT->heading('Documentação Portugol');
     require 'doc.html';
 }
 

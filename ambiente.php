@@ -8,4 +8,3 @@
 <input type="hidden" id="idportugol" value="<?php echo $portugol->id;?>">
 <input type="hidden" id="idaluno" value="<?php echo $USER->id;?>">
 <script src="portugol_interpreter/main.js"></script>
-<script src="salvar.js"></script>

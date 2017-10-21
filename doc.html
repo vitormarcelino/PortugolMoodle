@@ -1,1 +1,184 @@
-<embed src="doc.pdf" style="width:100%;" height="200" type='application/pdf'>
+<!-- <embed src="doc.pdf" style="width:100%;" height="200" type='application/pdf'> -->
+<hr>
+<h2>Documentação Portugol</h2>
+<link href="assets/doc.css" rel="stylesheet" />
+<div class="tab">
+    <button class="tablinks active" onclick="changeTab(event, 'intro')">Introdução</button>
+    <button class="tablinks" onclick="changeTab(event, 'gerais')">Características Gerais</button>
+    <button class="tablinks" onclick="changeTab(event, 'helloworld')">Primeiro Algoritmo</button>
+    <button class="tablinks" onclick="changeTab(event, 'tipagem')">Tipagem de Dados</button>
+    <button class="tablinks" onclick="changeTab(event, 'declaracao')">Declaração de Variáveis</button>
+    <button class="tablinks" onclick="changeTab(event, 'condicionais')">Estruturas condicionais</button>
+    <button class="tablinks" onclick="changeTab(event, 'repeticao')">Estruturas de Repetição</button>
+    <button class="tablinks" onclick="changeTab(event, 'io')">Entrada e Saida</button>
+</div>
+
+<div id="intro" class="tabcontent">
+    <h3>Introdução</h3>
+    <p>O QPortugol é um dialeto da pseudo-linguagem Portugol, que é amplamente utilizada para desenvolver algoritmos em português de forma simples e prática com o intuito de facilitar o ensino de algoritmos. A proposta desse projeto foi disponibilizar uma
+        implementação da linguagem Portugol fornecendo ferramentas que oferecem recursos de edição, compilação, execução e depuração de programas escritos nessa linguagem, de forma a favorecer estudantes que dão os primeiros passos no aprendizado de desenvolvimento
+        de softwares, bem como professores que ensinam disciplinas relacionadas a computação. Portanto, seu foco é primariamente didático.</p>
+</div>
+
+<div id="gerais" class="tabcontent hidden">
+    <h3>Características Gerais</h3>
+    <p>A linguagem em si não difere fundamentalmente ou apresenta novidades em relação ao uso popular de portugol. Semelhante à linguagens como Pascal e C, é uma linguagem imperativa, com comandos de controle de fluxo, manipulação de dados e recursos de
+        entrada e saída básicos. A linguagem em case sensitive, o que significa que, por exemplo, uma função chamada “leia” é diferente de uma função chamada “Leia”.</p>
+</div>
+
+<div id="helloworld" class="tabcontent hidden">
+    <h3>Primeiro Algoritmo</h3>
+    <p>Nessa seção criaremos o nosso primeiro programa. O mesmo terá como propósito exibir na tela a frase “Olá Mundo”.</p>
+    <textarea readonly class="code">
+algoritmo OlaMundo;
+inicio
+    imprima ("Olá Mundo!");
+fim
+    </textarea>
+</div>
+
+<div id="tipagem" class="tabcontent hidden">
+    <h3>Tipagem de Dados</h3>
+    <p>Tipos primitivos como inteiro e literal são suportados. Literais são tipos integrais, e não, tipos construídos pelo usuário. A tabela a seguir apresenta os tipos com respectivos exemplos de dados:
+    </p>
+    <table style="width:100%">
+        <tr>
+            <th>Tipo</th>
+            <th>Exemplo</th>
+        </tr>
+        <tr>
+            <td>Inteiro</td>
+            <td>19</td>
+        </tr>
+        <tr>
+            <td>Real</td>
+            <td>2.5</td>
+        </tr>
+        <tr>
+            <td>Caractere</td>
+            <td>'a'</td>
+        </tr>
+        <tr>
+            <td>Literal</td>
+            <td>'Uma Frase qualquer'</td>
+        </tr>
+        <tr>
+            <td>Lógico</td>
+            <td>verdadeiro</td>
+        </tr>
+    </table>
+</div>
+
+<div id="declaracao" class="tabcontent hidden">
+    <h3>Declaração de Variáveis</h3>
+    <p>Nessa seção será mostrado como a declaração de variáveis deve ser feita. Para tal, utilizaremos um bloco específico que deve aparecer logo após a declaração do algoritmo. O bloco é iniciado pela palavra-chave “variaveis” e termina com a palavra chave
+        “fimvariaveis”. Pelo menos uma variável deve ser declarada dentro do bloco (embora o bloco em si seja opcional) e apenas um bloco em escopo global deve ser declarado.</p>
+    <textarea readonly class="code">
+algoritmo teste_variaveis;
+variaveis
+    x:inteiro;
+    nome:literal;
+fimvariaveis
+inicio
+    //comandos do programa
+fim
+        </textarea>
+</div>
+
+<div id="condicionais" class="tabcontent hidden">
+    <h3>Estruturas Condicionais</h3>
+    <p>Nesse programa, é possível utilizar as estruturas condicionais se/ entao/ senao. Essas são estruturas que impõem uma condição ao algoritmo utilizando expressões, que são avaliadas para que uma decisão seja tomada (repetir execução, selecionar bloco
+        de instruções, etc). Qualquer expressão pode ser avaliada como expressão lógica. Expressões numéricas de valor “0” são avaliadas como falso. Demais valores numéricos são avaliados como verdadeiro. Valores literais nulos, da mesma forma, são avaliados
+        como falso, e demais textos, como verdadeiro.</p>
+
+    <textarea readonly class="code">
+algoritmo teste_condicao;
+variaveis
+    idade : inteiro;
+    nome : literal;
+fimvariaveis
+inicio
+    imprima("Digite seu nome:");
+    nome := leia();
+    imprima(nome + ", digite sua idade:");
+    idade := leia();
+    se idade >= 18 entao
+        se idade < 60 entao
+            imprima("adulto!");
+        senao
+            imprima("ancião" + '!');
+            fimse
+    senao
+        imprima("menor" + "!");
+    fimse
+fim
+</textarea>
+</div>
+
+<div id="repeticao" class="tabcontent hidden">
+    <h3>Estruturas de Repetição</h3>
+    <p>Nesse programa é possível utilizar as estruturas de repetição para/ enquanto. Essas são estruturas que impõem a repetição de um bloco de instruções dentro do algoritmo.</p>
+    <h3>Estrutura Enquanto</h3>
+    <p>A estrutura “enquanto” é a mais básica e comum das estruturas de repetição. Nessa estrutura um conjunto deinstruções é executado repetidamente enquanto o valor lógico de uma dada expressão for avaliado como “verdadeiro”.
+    </p>
+    <textarea readonly class="code">
+algoritmo fatorial;
+variaveis
+    res : inteiro;
+    fat : inteiro;
+    x : inteiro;
+fimvariaveis
+inicio
+    imprima("Digite um número:");
+    x := leia();
+    fat := x;
+    res := 1;
+    enquanto x <> 0 faca
+        res := res * x;
+        x := x - 1;
+    fimenquanto
+    imprima("fatorial de " + fat + " é igual a "+ res);
+fim
+    </textarea>
+    <h3>Estrutura Para</h3>
+    <p>A estrutura “para” é uma especialização da estrutura “enquanto”. Sua sintáxe é simples e determina um número finito de repetições as quais um bloco de instruções deve executar.
+    </p>
+    <textarea readonly class="code">
+algoritmo fatorial;
+variaveis
+    res : inteiro;
+    fat : inteiro;
+    x : inteiro;
+fimvariaveis
+inicio
+    imprima("Digite um número:");
+    fat := leia();
+    res := 1;
+    para x de fat ate 1 passo -1 faca
+        res := res * x;
+    fimpara
+    imprima("fatorial de " + fat + " é igual a " + res);
+fim
+    </textarea>
+</div>
+
+<div id="io" class="tabcontent hidden">
+    <h3>Entrada e Saída</h3>
+    <p>O QPortugol oferece duas funções internas: “leia” e “imprima”, que permitem uso básico de entrada e saída, respectivamente. A função “leia” não recebe argumentos e retorna o valor lido da entrada padrão (“STDIN”), o que significa, geralmente, ler
+        os dados que o usuário digitar no teclado, seguido do caractere “nova linha” (em geral, associado a tecla “Enter” no teclado). O tipo de dado retornado por “leia” é implicitamente convertido para o tipo primitivo exigido no contexto em que ela
+        é usada. A função “imprima” recebe um número variável de argumentos de qualquer tipo primitivo, sendo que pelo menos um argumento deve ser passado. Os valores passados como argumentos são convertidos para texto, concatenados por um caractere “+”
+        na ordem definida e enviados para “STDOUT” (em geral, associado ao display ou monitor). Não há retorno de valor para esta função.</p>
+    <textarea readonly class="code">
+algoritmo leia_imprima;
+variaveis
+    nome : literal;
+fimvariaveis
+inicio
+    imprima("Olá, qual o seu nome?");
+    nome := leia();
+    imprima("Seja bem vindo ao portugol, " + nome);
+fim
+    </textarea>
+</div>
+
+<script src="assets/doc.js"></script>
